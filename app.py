@@ -37,7 +37,7 @@ else:
     tickers = ["BTC-USD", "GC=F", "SPY"]
     weights = {"BTC-USD": btc_w, "GC=F": gold_w, "SPY": spy_w}
 
-    # Download data
+    # Download the data
     prices_df = download_asset_data(tickers, str(start_date), str(end_date))
 
     if not prices_df.empty:
