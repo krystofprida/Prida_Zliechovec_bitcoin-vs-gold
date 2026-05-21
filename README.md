@@ -31,11 +31,11 @@ This project is an interactive data analytics web application built with Python 
 
 ## Coherent Narrative & Key Analytical Findings
 
-1. The "Digital Gold" Myth
+### 1. The "Digital Gold" Myth ###
 Our analysis shows that while Bitcoin is often labeled as "digital gold", its price movements behave like a completely different asset class compared to physical gold. Bitcoin exhibits massive volatility and explosive cumulative returns, whereas gold acts as a slow, stable, and traditional safe haven.
 
-2. Correlation Analysis
+### 2. Correlation Analysis ###
 Through the Correlation Heatmap, we can observe that the daily returns of Bitcoin and Gold have a correlation very close to 0. This proves they are independent in daily movements, making them excellent assets for portfolio diversification.
 
-3. Dynamic Custom Index
+### 3. Dynamic Custom Index ###
 Following the project extension guidelines, we incorporated US Stocks (SPY) so users can build a custom blended index. For example, a portfolio of 40% BTC, 40% Gold, and 20% SPY smooths out Bitcoin's extreme volatility spikes while still heavily outperforming a pure gold investment over the 2016–2026 period. The interactive Streamlit environment allows users to test these different asset allocation strategies dynamically.
