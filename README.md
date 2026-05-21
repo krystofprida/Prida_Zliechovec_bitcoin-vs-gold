@@ -25,6 +25,7 @@ This project is an interactive data analytics web application built with Python 
    ```bash
    pip install -r requirements.txt
 4. Launch the Streamlit application: 
+   ```bash
    python -m streamlit run app.py
 
 
