@@ -21,8 +21,12 @@ This project is an interactive data analytics web application built with Python 
    git clone https://github.com/krystofprida/Prida_Zliechovec_bitcoin-vs-gold.git
 
 2. Open Git Bash in the project root folder.
-3. Install all necessary dependencies using pip: pip install -r requirements.txt
-4. python -m streamlit run app.py
+3. Install all necessary dependencies using pip:
+   ```bash
+   pip install -r requirements.txt
+4. Launch the Streamlit application: 
+   python -m streamlit run app.py
+
 
 ## Coherent Narrative & Key Analytical Findings
 
