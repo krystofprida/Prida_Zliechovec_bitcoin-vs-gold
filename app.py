@@ -1,7 +1,6 @@
 # To run this app write in git bash:
 # 1. Install all required packages: pip install -r requirements.txt
 # 2. Launch the interactive web app: python -m streamlit run app.py
-
 import pandas as pd
 import plotly.express as px
 import streamlit as st
@@ -21,7 +20,7 @@ st.sidebar.header("User Settings")
 start_date = st.sidebar.date_input("Start Date", pd.to_datetime("2016-04-01"))
 end_date = st.sidebar.date_input("End Date", pd.to_datetime("2026-03-31"))
 
-# Asset weights sliders
+# Asset weights sliders (PŮVODNÍ FUNKČNÍ VERZE)
 st.sidebar.subheader("Set Index Weights (Must equal 100%)")
 btc_w = st.sidebar.slider("Bitcoin (BTC-USD) weight %", 0, 100, 40)
 gold_w = st.sidebar.slider("Gold (GC=F) weight %", 0, 100, 40)
@@ -37,7 +36,7 @@ else:
     tickers = ["BTC-USD", "GC=F", "SPY"]
     weights = {"BTC-USD": btc_w, "GC=F": gold_w, "SPY": spy_w}
 
-    # Download the data
+    # Download data
     prices_df = download_asset_data(tickers, str(start_date), str(end_date))
 
     if not prices_df.empty:
@@ -59,7 +58,7 @@ else:
         fig_line = px.line(
             cumulative_df,
             labels={"value": "Wealth Multiplier", "index": "Date"},
-        )
+        )   
         fig_line.update_yaxes(type="log", tickformat=".0f")
         st.plotly_chart(fig_line, use_container_width=True)
 
@@ -94,4 +93,3 @@ else:
             st.plotly_chart(fig_rolling, use_container_width=True)
     else:
         st.error("No data found. Please check your internet connection.")
-#
