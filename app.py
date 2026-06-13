@@ -20,7 +20,7 @@ st.sidebar.header("User Settings")
 start_date = st.sidebar.date_input("Start Date", pd.to_datetime("2016-04-01"))
 end_date = st.sidebar.date_input("End Date", pd.to_datetime("2026-03-31"))
 
-# Asset weights sliders (PŮVODNÍ FUNKČNÍ VERZE)
+# Asset weights sliders
 st.sidebar.subheader("Set Index Weights (Must equal 100%)")
 btc_w = st.sidebar.slider("Bitcoin (BTC-USD) weight %", 0, 100, 40)
 gold_w = st.sidebar.slider("Gold (GC=F) weight %", 0, 100, 40)
