@@ -37,7 +37,7 @@ else:
     tickers = ["BTC-USD", "GC=F", "SPY"]
     weights = {"BTC-USD": btc_w, "GC=F": gold_w, "SPY": spy_w}
 
-    # Download data
+    # Download the data
     prices_df = download_asset_data(tickers, str(start_date), str(end_date))
 
     if not prices_df.empty:
@@ -60,6 +60,7 @@ else:
             cumulative_df,
             labels={"value": "Wealth Multiplier", "index": "Date"},
         )
+        fig_line.update_yaxes(type="log", tickformat=".0f")
         st.plotly_chart(fig_line, use_container_width=True)
 
         col1, col2 = st.columns(2)
